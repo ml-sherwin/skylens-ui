@@ -1,0 +1,98 @@
+body {
+  font-family: '微軟正黑體', 'Microsoft JhengHei', ui-sans-serif, system-ui,
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+  background: #f3f4f8;
+}
+
+label
+  @apply inline-block
+
+.vc-skylens-purple
+  --vc-accent-200 theme('colors.bg.DEFAULT')
+  --vc-accent-600 theme('colors.primary.DEFAULT')
+  --vc-accent-500 theme('colors.primary.lighter')
+  --vc-accent-700 theme('colors.primary.hover')
+  --vc-accent-900 theme('colors.primary.heavy')
+
+.vc-skylens-gray
+  --vc-accent-200 theme('colors.gray.5')
+  --vc-accent-500 theme('colors.gray.4')
+  --vc-accent-600 theme('colors.gray.3')
+  --vc-accent-700 theme('colors.gray.3')
+  --vc-accent-900 theme('colors.gray.2')
+
+.vc-container
+  .vc-weeks
+    @apply px-0
+
+.scrollbar-y
+  @apply absolute top-0 right-0 bottom-0 w-1 rounded-full
+
+  .indicator
+    @apply w-full h-12 bg-primary-lighter rounded-full
+
+.markdown-content
+  @apply text-base leading-relaxed
+
+  ol
+    @apply list-decimal list-inside
+
+    li
+      @apply font-bold
+
+      ul
+        @apply ml-3 list-disc list-inside
+
+        li
+          @apply font-normal
+
+          ul
+            @apply ml-5 list-none
+
+.custom-scrollbar-y
+  @apply overflow-x-hidden overflow-y-auto
+  -webkit-overflow-scrolling touch
+
+  /* width */
+  &::-webkit-scrollbar
+    @apply w-1
+
+  /* Track */
+  &::-webkit-scrollbar-track
+    @apply bg-transparent
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb
+    @apply bg-primary-lighter rounded
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover
+    @apply bg-primary-light
+
+.custom-scrollbar-x
+  @apply overflow-x-auto overflow-y-hidden
+  -webkit-overflow-scrolling touch
+
+  /* width */
+  &::-webkit-scrollbar
+    @apply h-1
+
+  /* Track */
+  &::-webkit-scrollbar-track
+    @apply bg-transparent
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb
+    @apply bg-secondary-new rounded
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover
+    @apply bg-secondary-new
+
+.fade-enter-active, .fade-leave-active
+  @apply transition-opacity
+
+.fade-enter, .fade-leave-to
+  @apply opacity-0
