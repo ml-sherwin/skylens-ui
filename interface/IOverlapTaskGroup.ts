@@ -1,9 +1,9 @@
-import type IDateRange from "./IDateRange";
-import type { IDomainInput } from "./IDomain";
-import type IHourRange from "./IHourRange";
-import type { IInputPoiGroup } from "./IPoi";
-import type IStayRange from "./IStayRange";
-import type { OnlineSourceType } from "./IWeb";
+import type IDateRange from "~ui/interface/IDateRange";
+import type { IDomainInput } from "~ui/interface/IDomain";
+import type IHourRange from "~ui/interface/IHourRange";
+import type { IInputPoiGroup } from "~ui/interface/IPoi";
+import type IStayRange from "~ui/interface/IStayRange";
+import type { OnlineSourceType } from "~ui/interface/IWeb";
 
 export enum OverlapTaskGroupType {
   Web = 'web',

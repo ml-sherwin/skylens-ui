@@ -1,7 +1,7 @@
-import type { IListResponse } from "./commons";
-import type IDateRange from "./IDateRange";
-import { OrgUserRole } from "./IOrganization";
-import { PoiGroupType } from "./IPoi";
+import type { IListResponse } from "~ui/interface/commons";
+import type IDateRange from "~ui/interface/IDateRange";
+import { OrgUserRole } from "~ui/interface/IOrganization";
+import { PoiGroupType } from "~ui/interface/IPoi";
 
 export enum CrossOverlapTaskStatus {
     Run = 'run',

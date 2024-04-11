@@ -1,4 +1,4 @@
-import type IDateRange from './IDateRange';
+import type IDateRange from '~ui/interface/IDateRange';
 
 export enum ScreenSize {
     md = 'md',

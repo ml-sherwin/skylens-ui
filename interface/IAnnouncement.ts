@@ -1,4 +1,4 @@
-import type { IListResponse } from "@/interface/commons";
+import type { IListResponse } from "~ui/interface/commons";
 
 export enum AnnouncementType {
     Announcement = 1,

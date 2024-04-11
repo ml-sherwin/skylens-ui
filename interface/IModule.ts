@@ -1,4 +1,4 @@
-import type { IPoiActivedCheck } from "~/interface/IPoi";
+import type { IPoiActivedCheck } from "~ui/interface/IPoi";
 
 export interface IModuleResponse {
   name: string;

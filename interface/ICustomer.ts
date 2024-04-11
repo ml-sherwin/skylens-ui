@@ -1,9 +1,9 @@
-import type IIndustryType from '@/interface/IIndustryType';
-import type { IIndustryTypeResponse } from '@/interface/IIndustryType';
-import type IDateRange from '@/interface/IDateRange';
-import type IProject from '@/interface/IProject';
-import type { IProjectResponse } from '@/interface/IProject';
-import type { IListResponse } from '~/interface/commons';
+import type IIndustryType from '~ui/interface/IIndustryType';
+import type { IIndustryTypeResponse } from '~ui/interface/IIndustryType';
+import type IDateRange from '~ui/interface/IDateRange';
+import type IProject from '~ui/interface/IProject';
+import type { IProjectResponse } from '~ui/interface/IProject';
+import type { IListResponse } from '~ui/interface/commons';
 
 export interface ICustomerResponse {
     org_id?: string;

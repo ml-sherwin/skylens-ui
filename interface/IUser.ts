@@ -1,8 +1,8 @@
-import type { IListResponse } from "@/interface/commons";
-import type { IModuleCategory, IModuleCategoryResponse } from "./IModule";
-import type IProject from "./IProject";
-import type { IProjectResponse } from "./IProject";
-import { OrgUserRole } from "./IOrganization";
+import type { IListResponse } from "~ui/interface/commons";
+import type { IModuleCategory, IModuleCategoryResponse } from "~ui/interface/IModule";
+import type IProject from "~ui/interface/IProject";
+import type { IProjectResponse } from "~ui/interface/IProject";
+import { OrgUserRole } from "~ui/interface/IOrganization";
 
 export enum UserRole {
   SuperUser = "su",

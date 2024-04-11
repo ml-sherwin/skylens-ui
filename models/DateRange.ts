@@ -1,5 +1,5 @@
 import { format } from 'date-fns';
-import type IDateRange from '@/interface/IDateRange';
+import type IDateRange from '~ui/interface/IDateRange';
 
 class DateRange implements IDateRange {
   start: Date;

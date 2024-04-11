@@ -1,9 +1,9 @@
-import type IDomain from "./IDomain";
-import type { IDomainResponse } from "./IDomain";
-import type { IModuleCategory, IModuleCategoryResponse } from "./IModule";
-import type { IPoiGroup, IPoiGroupResponse } from "./IPoi";
-import type { OrgUserRole } from "~/interface/IOrganization";
-import type { IListResponse } from '~/interface/commons';
+import type IDomain from "~ui/interface/IDomain";
+import type { IDomainResponse } from "~ui/interface/IDomain";
+import type { IModuleCategory, IModuleCategoryResponse } from "~ui/interface/IModule";
+import type { IPoiGroup, IPoiGroupResponse } from "~ui/interface/IPoi";
+import type { OrgUserRole } from "~ui/interface/IOrganization";
+import type { IListResponse } from '~ui/interface/commons';
 
 export interface IProjectStorageResponse {
   project_id: string;

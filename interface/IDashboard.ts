@@ -1,4 +1,4 @@
-import { WidgetQueryMap } from '~/utils/constants';
+import { WidgetQueryMap } from '~ui/utils/constants';
 
 type WidgetQueryMapKeyType = keyof typeof WidgetQueryMap;
 

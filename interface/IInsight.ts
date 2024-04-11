@@ -1,5 +1,5 @@
-import type IDateRange from "./IDateRange";
-import type { IWebOverlap, IWebVisitDetailResponse, IWebLocationDetailCityResponse, IWebOverlapResponse, IWebTopsiteDetailSiteResponse } from "./IWeb";
+import type IDateRange from "~ui/interface/IDateRange";
+import type { IWebOverlap, IWebVisitDetailResponse, IWebLocationDetailCityResponse, IWebOverlapResponse, IWebTopsiteDetailSiteResponse } from "~ui/interface/IWeb";
 
 export enum InsightTopicStatus {
   Normal = 'normal',

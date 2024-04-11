@@ -1,5 +1,5 @@
-import type { IDashboardWidget, IDashboardBlock } from '~/interface/IDashboard';
-import { DashboardWidgetSourceType, DashboardWidgetSize } from '~/interface/IDashboard';
+import type { IDashboardWidget, IDashboardBlock } from '~ui/interface/IDashboard';
+import { DashboardWidgetSourceType, DashboardWidgetSize } from '~ui/interface/IDashboard';
 
 export const AGE_RANGE_NAME = [
   '17以下',

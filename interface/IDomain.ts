@@ -1,4 +1,4 @@
-import type { IListResponse } from "./commons";
+import type { IListResponse } from "~ui/interface/commons";
 
 export enum DomainStatusResponse {
   Normal = 'normal',

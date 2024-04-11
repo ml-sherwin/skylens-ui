@@ -3,8 +3,8 @@
   .siderbar-modal(@click="onClickedToggle")
   .siderbar-logo
     a.logo(href="javascript:;" @click="onClickedLogo")
-      img.color(src="~/assets/images/commons/app-logo.png")
-      img.white(src="~/assets/images/commons/app-logo-white.png")
+      img.color(src="~ui/assets/images/commons/app-logo.png")
+      img.white(src="~ui/assets/images/commons/app-logo-white.png")
   nav.site-nav
     .nav-wrapper.custom-scrollbar-y
       ul(v-if="firstConfig.length > 0")

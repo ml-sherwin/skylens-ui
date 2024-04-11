@@ -1,7 +1,7 @@
-import type { IListResponse } from "@/interface/commons";
-import type IDateRange from "~/interface/IDateRange";
-import type IStayRange from '~/interface/IStayRange';
-import type IHourRange from '~/interface/IHourRange';
+import type { IListResponse } from "~ui/interface/commons";
+import type IDateRange from "~ui/interface/IDateRange";
+import type IStayRange from '~ui/interface/IStayRange';
+import type IHourRange from '~ui/interface/IHourRange';
 
 export enum AudTaskStatus {
     Run = 'run',
