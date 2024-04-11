@@ -5,7 +5,7 @@ import { dirname, join } from 'path';
 const currentDir = dirname(fileURLToPath(import.meta.url));
 
 export default defineNuxtConfig({
-  alias: { '~ui': currentDir, '~uiAssets': join(currentDir, './assets') },
+  alias: { '~ui': currentDir, 'images': fileURLToPath(new URL('./assets/images', import.meta.url)) },
   devtools: { enabled: true },
   components: [
     { path: '~ui/components' }
