@@ -13,11 +13,6 @@
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.1.1",
-    "@types/commonmark": "^0.27.9",
-    "@types/dompurify": "^3.0.5",
-    "@types/google.maps": "^3.55.3",
-    "@types/lodash": "^4.14.202",
-    "@types/sortablejs": "^1.15.8",
     "eslint": "^8.28.0",
     "nuxt": "^3.6.2",
     "typescript": "^4.9.3"
@@ -30,6 +25,11 @@
     "@gtm-support/vue-gtm": "^2.2.0",
     "@nuxtjs/tailwindcss": "^6.11.4",
     "@popperjs/core": "^2.11.8",
+    "@types/commonmark": "^0.27.9",
+    "@types/dompurify": "^3.0.5",
+    "@types/google.maps": "^3.55.3",
+    "@types/lodash": "^4.14.202",
+    "@types/sortablejs": "^1.15.8",
     "@vue/language-plugin-pug": "^2.0.11",
     "commonmark": "^0.31.0",
     "date-fns": "^2.30.0",
