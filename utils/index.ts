@@ -358,7 +358,7 @@ export const translateDayToLocale = (day: number) => {
   }
 }
 
-export const toLocaleString = (value: number | null, { NaNString = '' } = {}, toNumber = false) => {
+export const numberToLocaleString = (value: number | null, { NaNString = '' } = {}, toNumber = false) => {
   if (value === null || isNaN(value)) {
     return NaNString || '';
   } else if (!toNumber) {
