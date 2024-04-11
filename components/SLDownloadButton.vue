@@ -40,7 +40,7 @@ import {
   ga4ev,
 } from "~ui/utils";
 import type IDateRange from "~ui/interface/IDateRange";
-import watermarkImg from "~ui/assets/images/commons/watermark.svg";
+import watermarkImg from "~uiAssets/images/commons/watermark.svg";
 
 // http://www.excelcodex.com/2012/06/worksheets-naming-conventions/
 function safeSheetName(name: string) {
