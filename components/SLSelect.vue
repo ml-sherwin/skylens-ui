@@ -41,7 +41,7 @@
 
 <script lang="ts">
 import type { PropType } from "vue";
-import isEqual from "lodash/isEqual";
+import { isEqual } from "lodash-es";
 import { fromEvent } from "rxjs";
 import { createPopper } from "@popperjs/core";
 import type { Placement } from "@popperjs/core";

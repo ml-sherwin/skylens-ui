@@ -40,7 +40,7 @@
 </template>
 
 <script lang="ts">
-import debounce from "lodash/debounce";
+import { debounce } from "lodash-es";
 import { getUID } from "~ui/utils";
 
 export default defineComponent({

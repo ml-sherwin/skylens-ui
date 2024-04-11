@@ -15,8 +15,7 @@ import {
   format as formatDate,
   getDaysInMonth,
 } from 'date-fns';
-import sortBy from 'lodash/sortBy';
-import isEqual from 'lodash/isEqual';
+import { sortBy, isEqual } from "lodash-es";
 import type IDateRange from '~ui/interface/IDateRange';
 import { ScreenSize } from '~ui/interface/commons';
 import ExcelJS from 'exceljs';

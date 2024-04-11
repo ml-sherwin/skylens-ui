@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts">
-import isEqual from "lodash/isEqual";
+import { isEqual } from "lodash-es";
 import { getUID } from "~ui/utils";
 
 export default defineComponent({

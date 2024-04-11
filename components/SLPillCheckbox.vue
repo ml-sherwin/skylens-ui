@@ -15,7 +15,7 @@
 
 <script lang="ts">
 import type { PropType } from "vue";
-import isEqual from "lodash/isEqual";
+import { isEqual } from "lodash-es";
 import { getUID } from "~ui/utils";
 
 export default defineComponent({
