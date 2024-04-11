@@ -63,7 +63,7 @@ div(ref="el")
           td(:colspan="fields.length")
             div(v-if="loading", style="min-height: 200px")
             .flex.flex-col.items-center.py-8.px-4.space-y-3(v-else)
-              img(src="~/assets/images/commons/empty-box.png")
+              img(src="~ui/assets/images/commons/empty-box.png")
               .text-lg.text-primary-light {{ noItems }}
               .text-sm.text-gray-3(v-if="reason") 可能的原因：{{ reason }}
     SLLoading(

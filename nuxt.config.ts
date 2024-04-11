@@ -1,10 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { createResolver } from '@nuxt/kit';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
-const { resolve } = createResolver(import.meta.url);
+const currentDir = dirname(fileURLToPath(import.meta.url));
 
 export default defineNuxtConfig({
-  alias: { '~ui': resolve('./') },
+  alias: { '~ui': currentDir },
   devtools: { enabled: true },
   components: [
     { path: '~ui/components' }
