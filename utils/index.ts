@@ -17,8 +17,6 @@ import {
 } from 'date-fns';
 import sortBy from 'lodash/sortBy';
 import isEqual from 'lodash/isEqual';
-import DOMPurify from 'dompurify';
-import { Parser as MdParser, HtmlRenderer } from 'commonmark';
 import type IDateRange from '~ui/interface/IDateRange';
 import { ScreenSize } from '~ui/interface/commons';
 import ExcelJS from 'exceljs';
@@ -260,16 +258,6 @@ export const getBarChartBarLabelHeight = (maxValue: string | number, showLabel =
 
 export const getChartLabelWidth = (maxValue: string | number) => {
   return Number(maxValue).toLocaleString().length * 8;
-};
-
-export const markdownToHtml = (mdSource: string | null) => {
-  if (!mdSource) return '';
-  
-  return DOMPurify.sanitize(
-    new HtmlRenderer({ softbreak: '<br />' }).render(
-      new MdParser().parse(mdSource)
-    )
-  );
 };
 
 export const getDayDatesMatchWeekDay = (dateRange1: IDateRange, dateRange2: IDateRange | null) => {
