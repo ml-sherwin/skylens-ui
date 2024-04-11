@@ -1,6 +1,6 @@
 <template lang="pug">
 .no-data(:class='{ "no-data--sm": size === "sm" }')
-  img(src="~ui/assets/images/commons/empty-box.png")
+  img(src="~/assets/images/commons/empty-box.png")
   .no-data-title {{ title }}
   .no-data-reason(v-if='reason') 可能的原因：{{ reason }}
 </template>
