@@ -14,7 +14,6 @@ import {
   getYear,
   format as formatDate,
   getDaysInMonth,
-  subYears,
 } from 'date-fns';
 import sortBy from 'lodash/sortBy';
 import isEqual from 'lodash/isEqual';
@@ -229,7 +228,7 @@ export function rankListBy<T>(list: T[], rankBy: keyof T, desc = true) {
       rank: currentRank,
     };
   });
-};
+}
 
 export const getBarChartGridTop = (maxValue: number, showLabel = true) => {
   return (
@@ -524,7 +523,7 @@ export const getWebsiteFavico = (domain: string): Promise<{ domain: string; icoU
   });
 };
 
-export const httpUrlValidate = (url: string) => /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/.test(url);
+export const httpUrlValidate = (url: string) => /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_+.~#?&/=]*)$/.test(url);
 export const httpUrlToHost = (url: string) => {
   if (httpUrlValidate(url)) {
     try {
