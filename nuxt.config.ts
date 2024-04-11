@@ -1,11 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { fileURLToPath } from 'url';
-import { dirname } from 'path';
+import { dirname, join } from 'path';
 
 const currentDir = dirname(fileURLToPath(import.meta.url));
 
 export default defineNuxtConfig({
-  alias: { '~ui': currentDir },
+  alias: { '~ui': currentDir, '~ui/assets': join(currentDir, './assets') },
   devtools: { enabled: true },
   components: [
     { path: '~ui/components' }
