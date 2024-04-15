@@ -1,5 +1,5 @@
 <template lang="pug">
-TextInput(
+SLTextInput(
     :size='size'
     :modelValue="modelValue"
     :placeholder="placeholder"
