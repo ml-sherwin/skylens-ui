@@ -171,7 +171,7 @@ export default defineComponent({
       isComposing.value = true;
     }
 
-    function onInputCompositionEnd(e: InputEvent) {
+    function onInputCompositionEnd(e: CompositionEvent) {
       const target = e.target as HTMLInputElement;
       if (target) {
         if (Number.isInteger(lazy.value) || lazy.value) {
@@ -182,13 +182,14 @@ export default defineComponent({
       }
     }
 
-    function onInputedModelValue(e: InputEvent) {
-      if (isComposing.value && !e.isComposing) {
+    function onInputedModelValue(e: Event) {
+      const inputEvent = e as InputEvent;
+      if (isComposing.value && !inputEvent.isComposing) {
         isComposing.value = false;
         return;
       }
 
-      const target = e.target as HTMLInputElement;
+      const target = inputEvent.target as HTMLInputElement;
 
       if (target) {
         if (Number.isInteger(lazy.value) || lazy.value) {

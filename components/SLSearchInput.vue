@@ -1,11 +1,11 @@
 <template lang="pug">
 SLTextInput(
-    :size='size'
-    :modelValue="modelValue"
-    :placeholder="placeholder"
-    :lazy="lazy"
-    @update:modelValue='onInputedValue'
-  ).search-input
+  :size='size'
+  :modelValue="modelValue"
+  :placeholder="placeholder"
+  :lazy="lazy"
+  @update:modelValue='onInputedValue'
+).search-input
   template(#append)
     .button-group
       .button-group-divider
