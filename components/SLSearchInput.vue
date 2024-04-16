@@ -1,18 +1,19 @@
 <template lang="pug">
-SLTextInput(
-  :size='size'
-  :modelValue="modelValue"
-  :placeholder="placeholder"
-  :lazy="lazy"
-  @update:modelValue='onInputedValue'
-).search-input
-  template(#append)
-    .button-group
-      .button-group-divider
-      SLButton(v-if="!isSearch", :size='size' @click.prevent="onClickedSearch").btn-search
-        SLIcon(icon="search").icon-search
-      SLButton(v-else, :size='size' @click.prevent="onClickedClear").btn-clear
-        SLIcon(icon="times").icon-times
+.text-input abc
+//- SLTextInput(
+//-   :size='size'
+//-   :modelValue="modelValue"
+//-   :placeholder="placeholder"
+//-   :lazy="lazy"
+//-   @update:modelValue='onInputedValue'
+//- ).search-input
+//-   template(#append)
+//-     .button-group
+//-       .button-group-divider
+//-       SLButton(v-if="!isSearch", :size='size' @click.prevent="onClickedSearch").btn-search
+//-         SLIcon(icon="search").icon-search
+//-       SLButton(v-else, :size='size' @click.prevent="onClickedClear").btn-clear
+//-         SLIcon(icon="times").icon-times
 </template>
 
 <script lang="ts">
