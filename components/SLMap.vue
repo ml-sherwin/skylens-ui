@@ -4,10 +4,15 @@
 
 <script lang="ts">
 import type { PropType } from "vue";
-import { IconLayer } from "@deck.gl/layers";
-import { GoogleMapsOverlay } from "@deck.gl/google-maps";
+import { IconLayer } from "@deck.gl/layers/typed";
+import { GoogleMapsOverlay } from "@deck.gl/google-maps/typed";
 import type { IInputPoi } from "~ui/interface/IPoi";
 import { PoiStatus } from "~ui/interface/IPoi";
+
+interface MapMarker {
+  coordinates: [number, number];
+  marker: "trackedMarker" | "untrackMarker";
+}
 
 export default defineComponent({
   name: "SLMap",
@@ -57,7 +62,7 @@ export default defineComponent({
       const bounds = new google.maps.LatLngBounds();
       markersOverlay.setProps({
         layers: [
-          new IconLayer({
+          new IconLayer<MapMarker>({
             id: "IconLayer",
             data: latlons.value.map((latlon) => {
               bounds.extend(
@@ -75,9 +80,9 @@ export default defineComponent({
                     : "untrackMarker",
               };
             }),
-            getIcon: (d) => d.marker,
-            getPosition: (d) => d.coordinates,
-            getSize: (d) => 5,
+            getIcon: (d: MapMarker) => d.marker,
+            getPosition: (d: MapMarker) => d.coordinates,
+            getSize: () => 5,
             iconAtlas: "/assets/images/commons/map-markers.png",
             iconMapping: {
               trackedMarker: {
