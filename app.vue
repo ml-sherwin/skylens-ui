@@ -1,3 +1,3 @@
 <template lang="pug">
-SLSearchInput
+SLHeatMap
 </template>

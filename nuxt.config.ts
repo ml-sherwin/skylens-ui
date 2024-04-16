@@ -16,6 +16,7 @@ export default defineNuxtConfig({
   ],
   modules: ['@nuxtjs/tailwindcss'],
   plugins: [
+    '~ui/plugins/googlemaps.ts',
     '~ui/plugins/v-calendar.ts',
   ]
 })

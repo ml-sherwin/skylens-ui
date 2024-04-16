@@ -4,10 +4,8 @@
 
 <script lang="ts">
 import type { PropType } from "vue";
-import { Loader } from "@googlemaps/js-api-loader";
 import { IconLayer } from "@deck.gl/layers";
 import { GoogleMapsOverlay } from "@deck.gl/google-maps";
-import { MAP_API_KEY } from "~ui/utils/constants";
 import type { IInputPoi } from "~ui/interface/IPoi";
 import { PoiStatus } from "~ui/interface/IPoi";
 
@@ -25,23 +23,23 @@ export default defineComponent({
     },
   },
   setup(props) {
+    const { $googlemapsLoader } = useNuxtApp();
     const { controls, latlons } = toRefs(props);
 
     const mapEl = shallowRef<HTMLElement | null>(null);
-    const apiLoaded = ref(false);
 
     let map: google.maps.Map | null = null;
     let markersOverlay: GoogleMapsOverlay | null = null;
 
-    const loader = new Loader({
-      apiKey: MAP_API_KEY,
-      version: "weekly",
-      libraries: ["visualization"],
-    });
+    async function loadGoogleMapsApi() {
+      if (!$googlemapsLoader) return;
 
-    loader.load().then(() => {
-      apiLoaded.value = true;
-    });
+      await $googlemapsLoader.importLibrary("core");
+      await $googlemapsLoader.importLibrary("maps");
+      await $googlemapsLoader.importLibrary("marker");
+
+      setupMap();
+    }
 
     function resetMarkersIcon() {
       // markers.forEach((marker) => {
@@ -114,7 +112,7 @@ export default defineComponent({
     }
 
     function setupMap() {
-      if (!apiLoaded.value || !mapEl.value) return;
+      if (!mapEl.value) return;
 
       let controlOptions: {
         disableDefaultUI?: boolean;
@@ -165,7 +163,6 @@ export default defineComponent({
       // });
     }
 
-    watch(apiLoaded, setupMap);
     watch(
       latlons,
       () => {
@@ -175,7 +172,7 @@ export default defineComponent({
     );
 
     onMounted(() => {
-      setupMap();
+      loadGoogleMapsApi();
     });
 
     onBeforeUnmount(() => {

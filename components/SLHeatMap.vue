@@ -4,18 +4,6 @@
 
 <script lang="ts">
 import type { PropType } from "vue";
-import {
-  defineComponent,
-  toRefs,
-  shallowRef,
-  ref,
-  watch,
-  onMounted,
-  onBeforeUnmount,
-} from "#imports";
-import { Loader } from "@googlemaps/js-api-loader";
-import { MAP_API_KEY } from "~ui/utils/constants";
-
 const RADIUS = 30;
 
 export default defineComponent({
@@ -38,25 +26,25 @@ export default defineComponent({
   setup(props) {
     const { latlons, weights, isShowMarker } = toRefs(props);
 
+    const { $googlemapsLoader } = useNuxtApp();
     const mapEl = shallowRef<HTMLElement | null>(null);
-    const apiLoaded = ref(false);
 
     let map: google.maps.Map | null = null;
     let heatmap: google.maps.visualization.HeatmapLayer | null = null;
     let markers: google.maps.Marker[] = [];
 
-    const loader = new Loader({
-      apiKey: MAP_API_KEY,
-      version: "weekly",
-      libraries: ["visualization"],
-    });
+    async function loadGoogleMapsApi() {
+      if (!$googlemapsLoader) return;
 
-    loader.load().then(() => {
-      apiLoaded.value = true;
-    });
+      await $googlemapsLoader.importLibrary("core");
+      await $googlemapsLoader.importLibrary("maps");
+      await $googlemapsLoader.importLibrary("visualization");
+
+      setupMap();
+    }
 
     function setupMap() {
-      if (!apiLoaded.value || !mapEl.value) return;
+      if (!mapEl.value) return;
 
       if (!map) {
         map = new google.maps.Map(mapEl.value, {
@@ -127,7 +115,6 @@ export default defineComponent({
       heatmap.setData(heatMapData);
     }
 
-    watch(apiLoaded, setupMap);
     watch(latlons, () => {
       setupMarkers();
     });
@@ -141,7 +128,7 @@ export default defineComponent({
     });
 
     onMounted(() => {
-      setupMap();
+      loadGoogleMapsApi();
     });
 
     onBeforeUnmount(() => {
