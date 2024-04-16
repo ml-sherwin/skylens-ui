@@ -5,8 +5,8 @@
 <script lang="ts">
 import type { PropType } from "vue";
 import { Loader } from "@googlemaps/js-api-loader";
-import { IconLayer } from "@deck.gl/layers/typed";
-import { GoogleMapsOverlay } from "@deck.gl/google-maps/typed";
+import { IconLayer } from "@deck.gl/layers";
+import { GoogleMapsOverlay } from "@deck.gl/google-maps";
 import { MAP_API_KEY } from "~ui/utils/constants";
 import type { IInputPoi } from "~ui/interface/IPoi";
 import { PoiStatus } from "~ui/interface/IPoi";
